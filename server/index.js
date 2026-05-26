@@ -21,8 +21,9 @@ const corsOptions = {
 
 
 
-var constring = process.env.MONGODB_URI || "mongodb://127.0.0.1:27017";
-// const constring = 'mongodb+srv://satish-DLMS-project:7978839802s@satish1.fgdqllw.mongodb.net/?retryWrites=true&w=majority';
+var constring =
+  process.env.MONGODB_URI ||
+  "mongodb://127.0.0.1:27017/Driving-License-Db";// const constring = 'mongodb+srv://satish-DLMS-project:7978839802s@satish1.fgdqllw.mongodb.net/?retryWrites=true&w=majority';
 
 var app = express();
 app.use(cors());
