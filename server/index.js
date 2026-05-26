@@ -25,6 +25,14 @@ var constring =
   process.env.MONGODB_URI ||
   "mongodb://127.0.0.1:27017/Driving-License-Db";// const constring = 'mongodb+srv://satish-DLMS-project:7978839802s@satish1.fgdqllw.mongodb.net/?retryWrites=true&w=majority';
 
+mongoClient.connect(constring)
+.then(() => {
+    console.log("MongoDB Connected Successfully");
+})
+.catch((err) => {
+    console.error("MongoDB Connection Error:", err);
+});
+
 var app = express();
 app.use(cors());
 app.use(express.urlencoded({extended:true}));
